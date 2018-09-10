@@ -1,0 +1,28 @@
+<ion-header>
+    
+  <ion-navbar>
+
+      <img src="assets/imgs/ionic-crud.png" width="7000" height="300">
+
+    <ion-title class="fondo">
+      
+      <ion-icon name="book"></ion-icon>
+      <ion-icon name="create"></ion-icon>
+      <ion-icon name="trash"></ion-icon>
+      <ion-icon name="refresh-circle"></ion-icon>
+
+      <p class="titulo"></p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let articulo of articulos" (click)="goToDetail(articulo.ref)">
+      {{ articulo.nomp }}
+    </button>
+  </ion-list>
+  <div padding>
+    <button ion-button block (click)="createArticulo()">Nuevo Artículo</button>
+  </div>
+</ion-content>
